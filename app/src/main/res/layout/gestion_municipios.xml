@@ -34,34 +34,54 @@
         android:ems="10"
         android:inputType="textPersonName" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAtras"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="ATRAS" />
+
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIGUIENTE" />
+    </LinearLayout>
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="30dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="291dp"
+            android:layout_height="188dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="30dp">
+            android:padding="30dp"
+            android:weightSum="1">
 
             <Button
                 android:id="@+id/btnBuscar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="144dp"
+                android:layout_height="37dp"
                 android:text="BUSCAR" />
 
             <Button
                 android:id="@+id/btnInsertar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="144dp"
+                android:layout_height="37dp"
+                android:layout_weight="0.03"
                 android:text="INSERTAR" />
 
             <Button
                 android:id="@+id/btnActualizar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="144dp"
+                android:layout_height="37dp"
                 android:text="ACTUALIZAR" />
         </LinearLayout>
 

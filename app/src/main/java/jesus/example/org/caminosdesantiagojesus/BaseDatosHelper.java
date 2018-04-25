@@ -1,8 +1,11 @@
 package jesus.example.org.caminosdesantiagojesus;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
 
 /**
  * Created by JesúsRuiver on 11/04/2018.
@@ -20,6 +23,8 @@ public class BaseDatosHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(EstructuraBaseDatos.SQL_CREATE_MUNICIPIOS);
         db.execSQL(EstructuraBaseDatos.SQL_CREATE_ALBERGUES);
+
+
 
         db.execSQL("INSERT INTO municipio VALUES (null, " + "'Najera', " + " 3000 " + "'Antigua Capital del Reino de Nájera'");
         db.execSQL("INSERT INTO municipio VALUES (null, " + "'Logroño', " + " 120000 " + "'Capital de La Rioja'");
@@ -40,5 +45,25 @@ public class BaseDatosHelper extends SQLiteOpenHelper{
     }
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onUpgrade(db, oldVersion, newVersion);
+    }
+
+    public void muestraDatos(){
+
+        SQLiteDatabase db;
+
+        db = getReadableDatabase();
+
+        ArrayList<Albergue> albergues = new ArrayList<Albergue>();
+
+        Cursor cursor = db.rawQuery("Select * from albergue", null);
+
+        while(cursor.moveToNext()){
+            Albergue a = new Albergue(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getInt(3), cursor.getInt(4), cursor.getDouble(5), cursor.getInt(6));
+            albergues.add(a);
+
+            System.out.println(albergues.toString());
+        }
+
+
     }
 }
