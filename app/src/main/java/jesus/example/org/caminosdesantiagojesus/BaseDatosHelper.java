@@ -29,12 +29,9 @@ public class BaseDatosHelper extends SQLiteOpenHelper{
         db.execSQL("INSERT INTO municipio VALUES (null, 'Najera', 26300, 'Antigua capital del Reino de Nájera')");
         db.execSQL("INSERT INTO municipio VALUES (null, 'Logroño',120000, 'Capital de La Rioja')");
 
-        //db.execSQL("INSERT INTO albergue VALUES (null, 'Hostal Pepito','Albergue juvenil o albergue de juventud es un cuerno de establecimiento hostelero, orientado a los jovenes, con precios económicos y el objetivo de promocionar o alentaractividades de intercambio cultural entre promociones de distintos paises. En la mayoriade las ciudades del mundo, principalmente capitales'"
-         //       + " 10 " + " 3 " + " 23.3 " + " 0 ");
-        //db.execSQL("INSERT INTO albergue VALUES (null, " + "'Hostal Pepito 2', " + "'Hola Caracola'"
-        //        + " 13 " + " 3 " + " 13.3 " + " 0 ");
-        //db.execSQL("INSERT INTO albergue VALUES (null, " + "'Hostal Pepito 3', " + "'ajldhajfh ñaljkfñla'"
-           //     + " 3 " + " 3 " + " 3.3 " + " 0 ");
+        db.execSQL("INSERT INTO albergue VALUES (null, 'Hostal Pepito','Albergue juvenil o albergue de juventud es un cuerno de establecimiento hostelero, orientado a los jovenes, con precios económicos y el objetivo de promocionar o alentaractividades de intercambio cultural entre promociones de distintos paises. En la mayoriade las ciudades del mundo, principalmente capitales',10,3,23.3,0)");
+        db.execSQL("INSERT INTO albergue VALUES (null, " + "'Hostal Pepito 2', " + "'Hola Caracola',13,3,13.3,0)");
+        db.execSQL("INSERT INTO albergue VALUES (null,'Hostal Pepito 3','ajldhajfh ñaljkfñla',3,3,3.3,0)");
     }
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // This database is only a cache for online data, so its upgrade policy is
