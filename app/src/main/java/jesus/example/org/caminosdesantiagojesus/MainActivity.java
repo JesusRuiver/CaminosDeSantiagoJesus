@@ -35,11 +35,9 @@ public class MainActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-           contenedorDatos = new BaseDatosHelper(MainActivity.this);
+           //contenedorDatos = new BaseDatosHelper(MainActivity.this);
 
-            contenedorDatos.muestraDatos();
-
-            /*btnInsertar = (Button) findViewById(R.id.btnInsertar);
+           /* btnInsertar = (Button) findViewById(R.id.btnInsertar);
             btnActualizar = (Button) findViewById(R.id.btnActualizar);
             btnBuscar = (Button) findViewById(R.id.btnBuscar);
 

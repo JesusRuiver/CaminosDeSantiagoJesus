@@ -32,22 +32,27 @@ public class EstructuraBaseDatos {
         private static final String INTEGER_TYPE = " INTEGER";
         private static final String REAL_TYPE = " REAL";
         private static final String COMMA_SEP = ",";
-        public static final String SQL_CREATE_MUNICIPIOS =
-            "CREATE TABLE " + EstructuraBaseDatos.TABLE_MUNICIPIO + " (" +
+
+        public static final String SQL_CREATE_MUNICIPIOS = ("Create table municipio(_id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, habitantes INTEGER, descripcionMunicipio TEXT)");
+
+            /*"CREATE TABLE " + EstructuraBaseDatos.TABLE_MUNICIPIO + " (" +
                     EstructuraBaseDatos.COLUMN_ID_MUNICIPIO + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     EstructuraBaseDatos.COLUMN_NOMBRE_MUNICIPIO + TEXT_TYPE + COMMA_SEP +
                     EstructuraBaseDatos.COLUMN_HABITANTES + INTEGER_TYPE + COMMA_SEP +
-                    EstructuraBaseDatos.COLUMN_DESCRIPCION_MUNICIPIO + TEXT_TYPE + " )";
+                    EstructuraBaseDatos.COLUMN_DESCRIPCION_MUNICIPIO + TEXT_TYPE + " )";*/
 
-        public static final String SQL_CREATE_ALBERGUES =
-            "CREATE TABLE " + EstructuraBaseDatos.TABLE_ALBERGUE + " (" +
+        public static final String SQL_CREATE_ALBERGUES = ("Create table albergue (_id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, descripcion TEXT, valoracionSum INTEGER, votos INTEGER, precio REAL, id_Municipio INTEGER)");
+
+
+
+            /*"CREATE TABLE " + EstructuraBaseDatos.TABLE_ALBERGUE + " (" +
                     EstructuraBaseDatos.COLUMN_ID_ALBERGUE + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     EstructuraBaseDatos.COLUMN_NOMBRE_ALBERGUE + TEXT_TYPE + COMMA_SEP +
                     EstructuraBaseDatos.COLUMN_DESCRIPCION_ALBERGUE + TEXT_TYPE + COMMA_SEP +
                     EstructuraBaseDatos.COLUMN_VALORACION + INTEGER_TYPE + COMMA_SEP +
                     EstructuraBaseDatos.COLUMN_VOTOS + INTEGER_TYPE + COMMA_SEP +
                     EstructuraBaseDatos.COLUMN_PRECIO + REAL_TYPE + COMMA_SEP +
-                    EstructuraBaseDatos.COLUMN_ID_MUNICIPIO_DEL_ALBERGUE + INTEGER_TYPE + " )";
+                    EstructuraBaseDatos.COLUMN_ID_MUNICIPIO_DEL_ALBERGUE + INTEGER_TYPE + " )";*/
 
         public static final String SQL_DELETE_MUNICIPIOS =
                 "DROP TABLE IF EXISTS " + EstructuraBaseDatos.TABLE_MUNICIPIO;
