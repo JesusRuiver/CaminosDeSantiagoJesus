@@ -27,7 +27,7 @@ public class CaminoDeSantiagoBD extends SQLiteOpenHelper implements MetodosBaseD
         db.execSQL(EstructuraBaseDatos.SQL_CREATE_MUNICIPIOS);
         db.execSQL(EstructuraBaseDatos.SQL_CREATE_ALBERGUES);
 
-        //Insertamos los municipios
+        //Insertamos los municipio
         db.execSQL("INSERT INTO municipio VALUES (null, 'Najera', 26300, 'Antigua capital del Reino de Nájera')");
         db.execSQL("INSERT INTO municipio VALUES (null, 'Logroño',120000, 'Capital de La Rioja')");
 
