@@ -16,10 +16,10 @@
         android:onClick="lanzarGestionMunicipios"
         android:text="Gestión de Municipios" />
 
-    <Button
-            android:id="@+id/btn_consulta"
+    <Button android:id="@+id/btn_consulta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="lanzarConsultaMunicipios"
             android:text="Consulta de Municipios" />
 
     </LinearLayout>

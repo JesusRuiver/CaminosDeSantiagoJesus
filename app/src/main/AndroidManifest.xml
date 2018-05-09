@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".GestionMunicipios"
                    android:label="gestion_municipios"/>
+        <activity android:name=".ConsultaMunicipios"
+            android:label="consulta_municipios"/>
 
     </application>
 

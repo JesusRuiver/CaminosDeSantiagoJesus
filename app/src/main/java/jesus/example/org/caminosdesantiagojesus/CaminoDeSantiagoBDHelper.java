@@ -4,22 +4,27 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Created by JesúsRuiver on 11/04/2018.
  */
 
-public class CaminoDeSantiagoBD extends SQLiteOpenHelper implements MetodosBaseDatos{
+public class CaminoDeSantiagoBDHelper extends SQLiteOpenHelper implements MetodosBaseDatos{
 
     // If you change the database schema, you must increment the database version.
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "CaminoDeSantiago.db";
 
-    public CaminoDeSantiagoBD(Context context) {
+    public CaminoDeSantiagoBDHelper(Context context, String nomDb, Object o, int i) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+
+
     public void onCreate(SQLiteDatabase db) {
 
         //Creamos las dos tablas
@@ -98,6 +103,7 @@ public class CaminoDeSantiagoBD extends SQLiteOpenHelper implements MetodosBaseD
 
     @Override
     public void cargarMunicipio() {
+
 
     }
 
