@@ -1,4 +1,4 @@
-package jesus.example.org.caminosdesantiagojesus;
+package jesus.example.org.caminosdesantiagojesus.bbdd;
 
 /**
  * Created by JesúsRuiver on 25/04/2018.

@@ -1,12 +1,14 @@
 package jesus.example.org.caminosdesantiagojesus;
 
+import android.database.sqlite.SQLiteDatabase;
+
 /**
  * Created by JesúsRuiver on 25/04/2018.
  */
 
 public interface MetodosBaseDatos {
 
-    void crearMunicipio();
+    void crearMunicipio(SQLiteDatabase db);
     void crearAlbergue();
     void crearMonumento();
 
@@ -18,11 +20,13 @@ public interface MetodosBaseDatos {
     void borrarAlbergue();
     void borrarMonumento();
 
-    void cargarMunicipio();
-    void cargarAlbergue();
+    void cargarMunicipio(SQLiteDatabase db);
+    void cargarAlbergue(SQLiteDatabase db);
     void cargarMonumento();
 
     void valoracionAlbergue();
+
+    void cerrarConexion(SQLiteDatabase db);
 
 
 }

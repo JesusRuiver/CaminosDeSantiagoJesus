@@ -10,6 +10,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import jesus.example.org.caminosdesantiagojesus.conexion.ConexionCaminoSantiagoSQLiteHelper;
+
 /**
  * Created by JesúsRuiver on 09/05/2018.
  */
@@ -32,7 +34,7 @@ public class ConsultaMunicipios extends Activity {
     private ArrayList<String> listaMunicipios(){
 
         ArrayList<String> datos = new ArrayList<String>();
-        CaminoDeSantiagoBDHelper caminoHelper = new CaminoDeSantiagoBDHelper(this,"ConsultaMunicipios",null,1);
+        ConexionCaminoSantiagoSQLiteHelper caminoHelper = new ConexionCaminoSantiagoSQLiteHelper(this,"ConsultaMunicipios",null,1);
         SQLiteDatabase db = caminoHelper.getReadableDatabase();
 
         String sql = "select * from municipio";
