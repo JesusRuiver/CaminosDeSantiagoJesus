@@ -1,83 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:padding="30dp">
 
-    <EditText
-        android:id="@+id/nombre_municipio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/habitantes_municipio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/descripcion_municipio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/btnAtras"
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:text="ATRAS" />
-
-        <Button
-            android:id="@+id/btnSiguiente"
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:text="SIGUIENTE" />
-    </LinearLayout>
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="30dp">
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="30dp"
-            android:weightSum="1">
+            android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/btnBuscar"
+            <EditText
+                android:id="@+id/lbMunicipio"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:text="Municipio:"
+                tools:editable="false" />
+
+            <EditText
+                android:id="@+id/nombre_municipio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="BUSCAR" />
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
 
-            <Button
-                android:id="@+id/btnInsertar"
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/lbHabitantes"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:text="Habitantes:" />
+
+            <EditText
+                android:id="@+id/habitantes_municipio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="INSERTAR" />
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
 
-            <Button
-                android:id="@+id/btnActualizar"
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/lbDescripción"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:text="Descripción:" />
+
+            <EditText
+                android:id="@+id/descripcion_municipio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ACTUALIZAR" />
-        </LinearLayout>
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
 
-    </GridLayout>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR" />
+
+    <Button
+        android:id="@+id/btnInsertar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INSERTAR" />
+
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR" />
 
 </LinearLayout>

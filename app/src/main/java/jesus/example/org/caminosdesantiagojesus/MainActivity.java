@@ -22,26 +22,27 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtHabitantes;
     private EditText txtDescripcion;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtNombreMunicipio = (EditText) findViewById(R.id.nombre_municipio);
-        txtHabitantes = (EditText) findViewById(R.id.habitantes_municipio);
-        txtDescripcion = (EditText) findViewById(R.id.descripcion_municipio);
 
         ConexionCaminoSantiagoSQLiteHelper miConexion =
                 new ConexionCaminoSantiagoSQLiteHelper(this, "bdCaminoSantiago", null, 1);
 
 
         SQLiteDatabase db = miConexion.getWritableDatabase();
-        miConexion.onDowngrade(db ,ConexionCaminoSantiagoSQLiteHelper.DATABASE_VERSION,2);
+        miConexion.onDowngrade(db, ConexionCaminoSantiagoSQLiteHelper.DATABASE_VERSION, 2);
 
         miConexion.cargarMunicipio(db);
         miConexion.cargarAlbergue(db);
 
         miConexion.cerrarConexion(db);
+
+
+
     }
 
     public void lanzarGestionMunicipios(View view) {
@@ -54,6 +55,5 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, ConsultaMunicipios.class);
         startActivity(i);
     }
-
 
 }

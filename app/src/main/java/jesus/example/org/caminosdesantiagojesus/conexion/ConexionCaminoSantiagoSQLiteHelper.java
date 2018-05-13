@@ -3,8 +3,8 @@ package jesus.example.org.caminosdesantiagojesus.conexion;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.EditText;
 
-import jesus.example.org.caminosdesantiagojesus.EstructuraBaseDatos;
 import jesus.example.org.caminosdesantiagojesus.MetodosBaseDatos;
 
 /**
@@ -44,7 +44,8 @@ public class ConexionCaminoSantiagoSQLiteHelper extends SQLiteOpenHelper impleme
     }
 
     @Override
-    public void crearMunicipio(SQLiteDatabase db) {
+    public void crearMunicipio(SQLiteDatabase db, String nombreMun, int numHabitantes, String descripcion) {
+        db.execSQL("INSERT INTO municipio VALUES " + "(" + null + "," + "'" + nombreMun + "'" + "," + numHabitantes + "," + "'" + descripcion + "'" + ")");
 
     }
 

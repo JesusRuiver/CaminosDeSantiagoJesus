@@ -1,5 +1,7 @@
 package jesus.example.org.caminosdesantiagojesus.bbdd;
 
+import java.util.ArrayList;
+
 /**
  * Created by JesúsRuiver on 25/04/2018.
  */
@@ -10,6 +12,9 @@ public class Municipio {
     private String nombre;
     private int habitantes;
     private String descripcionMunicipio;
+
+    private ArrayList<Albergue> albergues;
+    private ArrayList<Monumento> monumentos;
 
     public Municipio(){
 

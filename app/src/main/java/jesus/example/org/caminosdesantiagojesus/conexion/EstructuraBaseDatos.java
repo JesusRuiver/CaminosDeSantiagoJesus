@@ -1,4 +1,4 @@
-package jesus.example.org.caminosdesantiagojesus;
+package jesus.example.org.caminosdesantiagojesus.conexion;
 
 /**
  * Created by JesúsRuiver on 11/04/2018.

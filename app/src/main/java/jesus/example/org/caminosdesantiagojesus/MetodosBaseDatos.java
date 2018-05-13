@@ -1,6 +1,7 @@
 package jesus.example.org.caminosdesantiagojesus;
 
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.EditText;
 
 /**
  * Created by JesúsRuiver on 25/04/2018.
@@ -8,7 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 public interface MetodosBaseDatos {
 
-    void crearMunicipio(SQLiteDatabase db);
+    void crearMunicipio(SQLiteDatabase db, String nombreMun, int numHabitantes, String descripcion);
     void crearAlbergue();
     void crearMonumento();
 
